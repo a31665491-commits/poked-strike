@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKED STRIKE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0b0e17;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFD166, #FF9F4A);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .sub {
+            color: #ffb347;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .card {
+            background: #11161f;
+            border-radius: 48px;
+            padding: 40px 24px;
+            border: 1px solid rgba(255, 180, 71, 0.2);
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 12px;
+            border-radius: 32px;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h2 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .version {
+            color: #ffb347;
+            font-size: 0.75rem;
+            background: #1e1a10;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .desc {
+            color: #a3b3d6;
+            font-size: 0.9rem;
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            border: none;
+            width: 100%;
+            padding: 18px 24px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: white;
+            border-radius: 60px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(46,204,113,0.3);
+        }
+
+        .download-btn:active {
+            transform: scale(0.97);
+        }
+
+        .warning {
+            background: #1a1410;
+            padding: 12px;
+            border-radius: 30px;
+            color: #ffaa66;
+            font-size: 0.8rem;
+            margin-bottom: 24px;
+        }
+
+        .info {
+            background: #0d1119;
+            border-radius: 32px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .info div {
+            color: #8e9ec2;
+            font-size: 0.85rem;
+            padding: 5px 0;
+        }
+
+        .info span {
+            color: #ffcd7e;
+            font-weight: bold;
+        }
+
+        .tg-link {
+            display: block;
+            background: #1f2a40;
+            color: #9bb5e6;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+
+        .tg-link:hover {
+            background: #2a3a58;
+        }
+
+        .footer {
+            margin-top: 24px;
+            font-size: 0.7rem;
+            color: #5a6e8f;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>POKED STRIKE</h1>
+    <div class="sub">⚡ Игра в разработке | Скачивай ⚡</div>
+
+    <div class="card">
+        <div class="logo">
+            <img src="1000012423.jpg" alt="Poked Strike Logo">
+        </div>
+        <h2>Poked Strike</h2>
+        <div class="version">Alpha test</div>
+        <div class="desc">
+            Динамичный шутер с уникальными способностями.<br>
+            Версия для тестирования
+        </div>
+
+        <button class="download-btn" id="downloadBtn">
+            📥 СКАЧАТЬ ИГРУ
+        </button>
+
+        <div class="warning">
+            ⚠️ Это не Counter-Strike ⚠️
+        </div>
+
+        <div class="info">
+            <div>📦 Текущая версия — <span>альфа / тест</span></div>
+            <div>🎮 Размер APK: <span>~138 МБ</span></div>
+            <div>📱 Платформа: <span>Android</span></div>
+        </div>
+
+        <a href="https://t.me/poked_strike" class="tg-link" target="_blank" rel="noopener noreferrer">
+            📨 Больше информации в Telegram
+        </a>
+    </div>
+
+    <div class="footer">
+        👾 РАЗРАБОТЧИК: LEAK<br>
+        🤝 СОЗДАНИЕ САЙТА: LEAK and DeepSeek
+    </div>
+</div>
+
+<script>
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+        var link = document.createElement('a');
+        link.href = '/poked-strike.apk';
+        link.download = 'PokedStrike.apk';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+</script>
+</body>
+</html>
