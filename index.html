@@ -53,17 +53,8 @@
         }
 
         .logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 12px;
-            border-radius: 32px;
-            overflow: hidden;
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            font-size: 80px;
+            margin-bottom: 12px;
         }
 
         h2 {
@@ -90,21 +81,17 @@
         }
 
         .download-btn {
+            display: block;
             background: linear-gradient(135deg, #2ecc71, #27ae60);
-            border: none;
             width: 100%;
             padding: 18px 24px;
             font-size: 1.3rem;
             font-weight: bold;
             color: white;
+            text-decoration: none;
             border-radius: 60px;
-            cursor: pointer;
             margin-bottom: 20px;
             box-shadow: 0 8px 20px rgba(46,204,113,0.3);
-        }
-
-        .download-btn:active {
-            transform: scale(0.97);
         }
 
         .warning {
@@ -163,9 +150,7 @@
     <div class="sub">⚡ Игра в разработке | Скачивай ⚡</div>
 
     <div class="card">
-        <div class="logo">
-            <img src="1000012423.jpg" alt="Poked Strike Logo">
-        </div>
+        <div class="logo">⚔️🐉</div>
         <h2>Poked Strike</h2>
         <div class="version">Alpha test</div>
         <div class="desc">
@@ -173,9 +158,10 @@
             Версия для тестирования
         </div>
 
-        <button class="download-btn" id="downloadBtn">
+        <!-- КНОПКА ВЕДЁТ В TELEGRAM -->
+        <a href="https://t.me/poked_strike" class="download-btn" target="_blank" rel="noopener noreferrer">
             📥 СКАЧАТЬ ИГРУ
-        </button>
+        </a>
 
         <div class="warning">
             ⚠️ Это не Counter-Strike ⚠️
@@ -197,16 +183,5 @@
         🤝 СОЗДАНИЕ САЙТА: LEAK and DeepSeek
     </div>
 </div>
-
-<script>
-    document.getElementById('downloadBtn').addEventListener('click', function() {
-        var link = document.createElement('a');
-        link.href = '/poked-strike.apk';
-        link.download = 'PokedStrike.apk';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    });
-</script>
 </body>
 </html>
